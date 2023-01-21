@@ -1,0 +1,142 @@
+:root {
+  --Desaturated_Red: hsl(0, 36%, 70%);
+  --Soft_Red: hsl(0, 93%, 68%);
+  --Dark_Grayish_Red: hsl(0, 6%, 24%);
+}
+
+.container {
+  max-width: 100vw;
+  max-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-container {
+  background-color: Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+  width: 60vw;
+  height: 100vh;
+  padding: 5rem 23% 5rem 10%;
+  box-sizing: border-box;
+}
+
+.image-container {
+  background-image: url(../../../public/Assets/images/hero-desktop.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 40vw;
+  height: 100vh;
+}
+
+.logo-container-desktop {
+  height: 5rem;
+  background-image: url(../../../public/Assets/images/logo.svg);
+  background-repeat: no-repeat;
+}
+
+.logo-container-mobile {
+  display: none;
+  height: 5rem;
+  background-image: url(../../../public/Assets/images/logo.svg);
+  background-repeat: no-repeat;
+}
+
+.contact-container h1 {
+  font-size: 5rem;
+  letter-spacing: 1.5rem;
+  font-weight: 600;
+}
+
+.contact-container span {
+  color: var(--Desaturated_Red);
+  font-weight: 300;
+}
+
+.contact-container p {
+  line-height: 2rem;
+  color: var(--Desaturated_Red);
+  font-weight: 700;
+  margin-bottom: 3rem;
+}
+
+.input-container {
+  display: flex;
+}
+
+.input-container input {
+  padding: 1rem;
+  width: 100%;
+  position: relative;
+  border-radius: 30px;
+  border: 1px solid var(--Desaturated_Red);
+}
+
+.input-container input::placeholder {
+  color: var(--Desaturated_Red);
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.input-container input:focus {
+  outline: none;
+}
+
+.input-container button {
+  padding: 1rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 74%, 74%) 100%);
+  border: none;
+  width: 5%;
+  left: 32%;
+  height: 3.1rem;
+  border-radius: 30px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.input-container button img {
+  height: 100%;
+  width: 20%;
+}
+
+@media only screen and (max-width: 900px) {
+body{
+  text-align: center;
+}
+
+  .container {
+    flex-direction: column-reverse;
+  }
+
+  .image-container {
+    margin: none;
+    width: 100vw;
+    height: 40vh;
+    background-size: cover;
+    box-sizing: border-box;
+  }
+
+  .contact-container {
+    height: 60vh;
+    width: 100vw;
+    padding: 1rem 3rem;
+  }
+
+  .logo-container-desktop {
+    display: none;
+  }
+
+  .logo-container-mobile {
+    display: flex;
+    margin: 2rem 0 0 2rem;
+  }
+
+  .contact-container h1{
+    font-size: 2rem;
+  }
+
+  .input-container button{
+    left: 68%;
+    width: 25%;
+  }
+}
