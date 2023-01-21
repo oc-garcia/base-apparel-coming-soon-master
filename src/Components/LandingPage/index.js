@@ -14,12 +14,12 @@ const LandingPage = () => {
           Hello fellow shoppers! We're currently building our new fashion store. Add your email bellowto stay up-to-date
           with announcements and our launch deals.
         </p>
-        <div className="input-container">
+        <form className="input-container">
           <input type="email" placeholder="Email Address" required />
           <button type="submit">
             <img src={submitIcon} alt="" />
           </button>
-        </div>
+        </form>
       </section>
       <section className="image-container"></section>
       <div className="logo-container-mobile"></div>
