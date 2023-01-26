@@ -99,6 +99,11 @@
   width: 20%;
 }
 
+.errorMsg {
+  color:  var(--Soft_Red);
+  font-size: small;
+}
+
 @media only screen and (max-width: 900px) {
 body{
   text-align: center;

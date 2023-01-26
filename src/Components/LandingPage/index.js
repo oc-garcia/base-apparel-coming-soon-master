@@ -1,7 +1,10 @@
 import "./LandingPage.css";
-import submitIcon from "./icon-arrow.svg"
+import submitIcon from "./icon-arrow.svg";
 
 const LandingPage = () => {
+  const submitForm = (event) => {
+    event.preventDefault();
+  };
   return (
     <main className="container">
       <section className="contact-container">
@@ -14,12 +17,13 @@ const LandingPage = () => {
           Hello fellow shoppers! We're currently building our new fashion store. Add your email bellowto stay up-to-date
           with announcements and our launch deals.
         </p>
-        <form className="input-container">
+        <form onSubmit={submitForm} className="input-container">
           <input type="email" placeholder="Email Address" required />
           <button type="submit">
             <img src={submitIcon} alt="" />
           </button>
         </form>
+        <span className="errorMsg">Please provide a valid email</span>
       </section>
       <section className="image-container"></section>
       <div className="logo-container-mobile"></div>
