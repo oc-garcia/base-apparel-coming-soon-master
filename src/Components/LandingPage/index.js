@@ -3,10 +3,6 @@ import submitIcon from "./icon-arrow.svg";
 import { useForm } from "react-hook-form";
 
 const LandingPage = () => {
-  /*const handleSubmit = (event) => {
-    event.preventDefault();
-    {!errors ? "input-container-error" : "input-container"}
-  }; */
 
   const {
     register,
@@ -15,8 +11,6 @@ const LandingPage = () => {
   } = useForm({
     defaultValues: { email: "" },
   });
-
-  console.log(errors);
 
   return (
     <main className="container">
