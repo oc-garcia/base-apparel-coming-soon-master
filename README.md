@@ -1,4 +1,4 @@
-# Base Apparel coming soon Landing Page
+# Landing Page on React
 
 ## Tecnologies 
 React, React validation form hook, HTML, CSS, JavaScript.
