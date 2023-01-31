@@ -63,7 +63,7 @@
   display: flex;
 }
 
-.input-container input {
+.input-container {
   padding: 1rem;
   width: 100%;
   position: relative;
@@ -71,12 +71,12 @@
   border: 1px solid var(--Desaturated_Red);
 }
 
-.input-container input::placeholder {
+.input-container::placeholder {
   color: var(--Desaturated_Red);
   font-family: "Josefin Sans", sans-serif;
 }
 
-.input-container input:focus {
+.input-container:focus {
   outline: none;
 }
 
@@ -100,14 +100,14 @@
 }
 
 .errorMsg {
-  color:  var(--Soft_Red);
+  color: var(--Soft_Red);
   font-size: small;
 }
 
 @media only screen and (max-width: 900px) {
-body{
-  text-align: center;
-}
+  body {
+    text-align: center;
+  }
 
   .container {
     flex-direction: column-reverse;
@@ -136,11 +136,11 @@ body{
     margin: 2rem 0 0 2rem;
   }
 
-  .contact-container h1{
+  .contact-container h1 {
     font-size: 2rem;
   }
 
-  .input-container button{
+  .input-container button {
     left: 68%;
     width: 25%;
   }

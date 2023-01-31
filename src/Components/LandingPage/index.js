@@ -1,10 +1,22 @@
 import "./LandingPage.css";
 import submitIcon from "./icon-arrow.svg";
+import { useForm } from "react-hook-form";
 
 const LandingPage = () => {
-  const submitForm = (event) => {
+  /*const handleSubmit = (event) => {
     event.preventDefault();
-  };
+  }; */
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    defaultValues: { email: "" },
+  });
+
+  console.log(errors);
+
   return (
     <main className="container">
       <section className="contact-container">
@@ -17,13 +29,26 @@ const LandingPage = () => {
           Hello fellow shoppers! We're currently building our new fashion store. Add your email bellowto stay up-to-date
           with announcements and our launch deals.
         </p>
-        <form onSubmit={submitForm} className="input-container">
-          <input type="email" placeholder="Email Address" required />
+        <form
+          className={!errors ? "input-container-error" : "input-container"}
+          onSubmit={handleSubmit((data) => {
+            console.log(data);
+          })}>
+          <input
+            {...register("email", {
+              required: "Please provide a valid email 1",
+              pattern: {
+                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                message: "Please provide a valid email 2",
+              },
+            })}
+            placeholder="Email Address"
+          />
           <button type="submit">
             <img src={submitIcon} alt="" />
           </button>
         </form>
-        <span className="errorMsg">Please provide a valid email</span>
+        <p className="errorMsg">{errors.email?.message}</p>
       </section>
       <section className="image-container"></section>
       <div className="logo-container-mobile"></div>
