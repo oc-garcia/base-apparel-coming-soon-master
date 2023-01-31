@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 const LandingPage = () => {
   /*const handleSubmit = (event) => {
     event.preventDefault();
+    {!errors ? "input-container-error" : "input-container"}
   }; */
 
   const {
@@ -30,7 +31,7 @@ const LandingPage = () => {
           with announcements and our launch deals.
         </p>
         <form
-          className={!errors ? "input-container-error" : "input-container"}
+          className={errors.email ? "input-container-error" : "input-container"}
           onSubmit={handleSubmit((data) => {
             console.log(data);
           })}>

@@ -63,7 +63,7 @@
   display: flex;
 }
 
-.input-container {
+.input-container input {
   padding: 1rem;
   width: 100%;
   position: relative;
@@ -71,12 +71,12 @@
   border: 1px solid var(--Desaturated_Red);
 }
 
-.input-container::placeholder {
+.input-container input::placeholder {
   color: var(--Desaturated_Red);
   font-family: "Josefin Sans", sans-serif;
 }
 
-.input-container:focus {
+.input-container input:focus {
   outline: none;
 }
 
@@ -95,6 +95,50 @@
 }
 
 .input-container button img {
+  height: 100%;
+  width: 20%;
+}
+
+.input-container-error {
+  display: flex;
+}
+
+.input-container-error input {
+  padding: 1rem;
+  width: 100%;
+  position: relative;
+  border-radius: 30px;
+  border: 1px solid var(--Soft_Red);
+  background-image: url(../../../public/Assets/images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-size: 1rem;
+  background-position: 80%; 
+}
+
+.input-container-error input::placeholder {
+  color: var(--Desaturated_Red);
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.input-container-error input:focus {
+  outline: none;
+}
+
+.input-container-error button {
+  padding: 1rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: linear-gradient(to right, hsl(0, 80%, 86%), hsl(0, 74%, 74%) 100%);
+  border: none;
+  width: 5%;
+  left: 32%;
+  height: 3.1rem;
+  border-radius: 30px;
+  position: absolute;
+  cursor: pointer;
+}
+
+.input-container-error button img {
   height: 100%;
   width: 20%;
 }
