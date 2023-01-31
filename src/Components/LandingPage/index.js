@@ -37,10 +37,10 @@ const LandingPage = () => {
           })}>
           <input
             {...register("email", {
-              required: "Please provide a valid email 1",
+              required: "Please provide a valid email",
               pattern: {
                 value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
-                message: "Please provide a valid email 2",
+                message: "Please provide a valid email",
               },
             })}
             placeholder="Email Address"
