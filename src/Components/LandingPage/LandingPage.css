@@ -188,4 +188,13 @@
     left: 68%;
     width: 25%;
   }
+
+  .input-container-error input {
+    background-position: 70%;
+  }
+
+  .input-container-error button {
+    left: 68%;
+    width: 25%;
+  }
 }

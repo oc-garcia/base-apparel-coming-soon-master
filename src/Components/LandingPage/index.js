@@ -31,7 +31,7 @@ const LandingPage = () => {
           })}>
           <input
             {...register("email", {
-              required: "Please provide a valid email",
+              required: "Field cannot be empty",
               pattern: {
                 value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                 message: "Please provide a valid email",
